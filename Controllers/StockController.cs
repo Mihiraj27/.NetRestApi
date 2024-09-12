@@ -5,6 +5,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using HttpApp.Data;
+using HttpApp.Mapper;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,9 +27,22 @@ namespace HttpApp.Controllers{
         }
 
 
+
+        [HttpGet("{id}")]
+        public IActionResult getbyId([FromRoute] int id){
+            var stock  = _context.Stock.Find(id);
+            if(stock == null){
+                return NotFound();
+            }
+
+            return Ok(stock);
+        }
+
+
         [HttpGet]
         public IActionResult getAll(){
             var stocks = _context.Stock.ToList();
+          //  .Select(s=>s.toStockDto());
             return Ok(stocks);
         }
     }
