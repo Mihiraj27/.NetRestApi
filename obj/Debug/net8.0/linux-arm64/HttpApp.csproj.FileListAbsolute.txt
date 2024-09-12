@@ -1,0 +1,7 @@
+/Users/mihiraj/Learn/CloudCon/HttpApp/obj/Debug/net8.0/linux-arm64/HttpApp.csproj.AssemblyReference.cache
+/Users/mihiraj/Learn/CloudCon/HttpApp/obj/Debug/net8.0/linux-arm64/HttpApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihiraj/Learn/CloudCon/HttpApp/obj/Debug/net8.0/linux-arm64/HttpApp.AssemblyInfoInputs.cache
+/Users/mihiraj/Learn/CloudCon/HttpApp/obj/Debug/net8.0/linux-arm64/HttpApp.AssemblyInfo.cs
+/Users/mihiraj/Learn/CloudCon/HttpApp/obj/Debug/net8.0/linux-arm64/HttpApp.csproj.CoreCompileInputs.cache
+/Users/mihiraj/Learn/CloudCon/HttpApp/obj/Debug/net8.0/linux-arm64/HttpApp.MvcApplicationPartsAssemblyInfo.cs
+/Users/mihiraj/Learn/CloudCon/HttpApp/obj/Debug/net8.0/linux-arm64/HttpApp.MvcApplicationPartsAssemblyInfo.cache
