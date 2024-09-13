@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using HttpApp.interfaces;
 using HttpApp.Repository;
+using HttpApp.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,7 @@ builder.Services.AddDbContext<ApplicationDBContext> (options =>{
 });
 
 builder.Services.AddScoped<IStockRepository,StockRepository>();
+builder.Services.AddScoped<ICommentRepository,CommentRepository>();
 
 var app = builder.Build();
 

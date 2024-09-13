@@ -27,14 +27,11 @@ namespace HttpApp.Controllers{
             _stockrepo = stockrepo;
         }
 
-        [HttpGet("/test")]
-        public IActionResult testRes(){
-            return Ok("Helll");
-        }
+       
 
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> getbyId([FromRoute] int id){
             var stock  = await  _stockrepo.FindAsync(id);
             if(stock == null){
@@ -63,7 +60,7 @@ namespace HttpApp.Controllers{
         }
  
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> deleteStock([FromRoute] int id){
 
             var stock = await _stockrepo.deleteAsync(id);
@@ -74,7 +71,7 @@ namespace HttpApp.Controllers{
         }
 
         [HttpPut]
-        [Microsoft.AspNetCore.Mvc.Route("{id}")]
+        [Microsoft.AspNetCore.Mvc.Route("{id:int}")]
         public async Task<IActionResult> updateStock([FromRoute] int id , [FromBody] UpdateStockRequestDto updateStockRequestDto){
 
             var stockModel = await _stockrepo.updateAsync(id,updateStockRequestDto);
